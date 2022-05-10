@@ -12,9 +12,7 @@ struct ContentView: View {
     // MARK: - PROPERTY
     
     @State var task: String = ""
-    private var isButtonDisabled: Bool {
-        task.isEmpty
-    }  //  Checks whether we left no value in the text field
+    @State private var showNewTaskItem: Bool = false // Stores the actual state of the item view
     
     // FETCHING DATA
     @Environment(\.managedObjectContext) private var viewContext
@@ -25,25 +23,6 @@ struct ContentView: View {
     private var items: FetchedResults<Item>
     
     // MARK: - FUNCTION
-    
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
-            newItem.task = task
-            newItem.completion = false
-            newItem.id = UUID()
-            do {
-                try viewContext.save()
-            } catch {
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
-            task = ""
-            hideKeyboard()
-        }
-    }
-
     private func deleteItems(offsets: IndexSet) {
         withAnimation {
             offsets.map { items[$0] }.forEach(viewContext.delete)
@@ -57,48 +36,49 @@ struct ContentView: View {
     }
     
     // MARK: - BODY
-
     var body: some View {
-        
         NavigationView {
             ZStack {
+                // MARK: - MAIN VIEW
                 VStack {
-                    VStack(spacing: 16) {
-                        // TASK Field
-                        TextField("New Task", text: $task)
-                            .padding()
-                            .background(
-                                Color(UIColor.systemGray6)
-                            )
-                            .cornerRadius(10)
-                        
-                        // SAVE Button
-                        Button(action: {
-                            addItem()
-                        }, label: {
-                            Spacer()
-                            Text("SAVE")
-                            Spacer()
-                        })
-                        .disabled(isButtonDisabled)
-                        .padding()
-                        .font(.headline)
-                        .foregroundColor(.white)
-                        .background(isButtonDisabled ? Color.gray : Color.pink)  // if disabled, gray
-                        .cornerRadius(10)
+                    // MARK: - HEADER
+                    Spacer(minLength: 80)
+                    
+                    // MARK: - NEW TASK BUTTON
+                    Button(action: {
+                        showNewTaskItem = true
+                    }, label: {
+                        Image(systemName: "plus.circle")
+                            .font(.system(size: 30, weight: .semibold, design: .rounded))
+                        Text("New Task")
+                            .font(.system(size: 24, weight: .bold, design: .rounded))
+                    })
+                    .foregroundColor(.white)
+                    .padding(.horizontal, 20)
+                    .padding(.vertical, 15)
+                    .background(
+                        LinearGradient(gradient: Gradient(colors: [Color.pink, Color.blue]), startPoint: .leading, endPoint: .trailing)
+                            .clipShape(Capsule())
+                    )
+                    .shadow(color: Color(red: 0, green: 0, blue: 0), radius: 8, x: 2, y: 4)
+                    
+                    // MARK: - TASKS
+                    
+                    if showNewTaskItem {
+                        BlankView()
+                            .onTapGesture {
+                                withAnimation() {
+                                    showNewTaskItem = false
+                                }
+                            }
+                        NewTaskItemView(isShowing: $showNewTaskItem)
                     }
-                    .padding()
+                    
                         List {
                             ForEach(items) { item in
-    //                            VStack(alignment: .leading) {
                                 NavigationLink {
                                     VStack(alignment: .leading) {
-    //                                    Text(item.task ?? "")
-    //                                        .font(.headline)
-    //                                        .fontWeight(.bold)
                                         Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-    //                                        .font(.footnote)
-    //                                        .foregroundColor(.gray)
                                         }
                                     } label: {
                                         VStack(alignment: .leading) {
@@ -118,6 +98,7 @@ struct ContentView: View {
                         .padding(.vertical, 0)
                         .frame(maxWidth: 640)
                 } // VStack
+                // MARK: - NEW TASK ITEM
             }
             .onAppear() {
                 UITableView.appearance().backgroundColor = UIColor.clear
@@ -128,6 +109,9 @@ struct ContentView: View {
                                 EditButton()
                             }
                     }
+                        .background(
+                            BackgroundImageView()
+                        )
                         .background(
                             backgroundGradient.ignoresSafeArea(.all)
                         )
