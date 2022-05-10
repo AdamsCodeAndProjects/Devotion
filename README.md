@@ -4,7 +4,7 @@
 This SwiftUI app features Core Data.  It creates a checklist of things to do that persists to memory.
 
 <h1> Featuring </h1>
-* Core Data with SwiftUI App Life Cycle /n
+* Core Data with SwiftUI App Life Cycle <br>
 * Basic Widget
 * Switches from Light to Dark mode by a click of a button.
 * Uses a blur visual effect when typing 
