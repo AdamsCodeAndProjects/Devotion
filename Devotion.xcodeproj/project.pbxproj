@@ -24,7 +24,38 @@
 		667DEDA5282B09C20089B916 /* sound-rise.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 667DEDA2282B09C20089B916 /* sound-rise.mp3 */; };
 		667DEDA6282B09C20089B916 /* sound-tap.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 667DEDA3282B09C20089B916 /* sound-tap.mp3 */; };
 		667DEDA8282B0D580089B916 /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667DEDA7282B0D580089B916 /* SoundPlayer.swift */; };
+		667DEDB0282B119C0089B916 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 667DEDAF282B119C0089B916 /* WidgetKit.framework */; };
+		667DEDB2282B119C0089B916 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 667DEDB1282B119C0089B916 /* SwiftUI.framework */; };
+		667DEDB5282B119C0089B916 /* DevotionWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667DEDB4282B119C0089B916 /* DevotionWidget.swift */; };
+		667DEDB7282B119E0089B916 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 667DEDB6282B119E0089B916 /* Assets.xcassets */; };
+		667DEDBB282B119E0089B916 /* DevotionWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 667DEDAD282B119C0089B916 /* DevotionWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		667DEDC0282B15F60089B916 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 667DED79282AAC700089B916 /* Assets.xcassets */; };
+		667DEDC1282B16920089B916 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667DED93282ABA070089B916 /* Constant.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		667DEDB9282B119E0089B916 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 667DED6A282AAC6E0089B916 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 667DEDAC282B119C0089B916;
+			remoteInfo = DevotionWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		667DEDBF282B119E0089B916 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				667DEDBB282B119E0089B916 /* DevotionWidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		667DED72282AAC6E0089B916 /* Devotion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Devotion.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,6 +77,12 @@
 		667DEDA2282B09C20089B916 /* sound-rise.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-rise.mp3"; sourceTree = "<group>"; };
 		667DEDA3282B09C20089B916 /* sound-tap.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-tap.mp3"; sourceTree = "<group>"; };
 		667DEDA7282B0D580089B916 /* SoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
+		667DEDAD282B119C0089B916 /* DevotionWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DevotionWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		667DEDAF282B119C0089B916 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		667DEDB1282B119C0089B916 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		667DEDB4282B119C0089B916 /* DevotionWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevotionWidget.swift; sourceTree = "<group>"; };
+		667DEDB6282B119E0089B916 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		667DEDB8282B119E0089B916 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +93,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		667DEDAA282B119C0089B916 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				667DEDB2282B119C0089B916 /* SwiftUI.framework in Frameworks */,
+				667DEDB0282B119C0089B916 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -63,6 +109,8 @@
 			isa = PBXGroup;
 			children = (
 				667DED74282AAC6E0089B916 /* Devotion */,
+				667DEDB3282B119C0089B916 /* DevotionWidget */,
+				667DEDAE282B119C0089B916 /* Frameworks */,
 				667DED73282AAC6E0089B916 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -71,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				667DED72282AAC6E0089B916 /* Devotion.app */,
+				667DEDAD282B119C0089B916 /* DevotionWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -156,6 +205,25 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		667DEDAE282B119C0089B916 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				667DEDAF282B119C0089B916 /* WidgetKit.framework */,
+				667DEDB1282B119C0089B916 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		667DEDB3282B119C0089B916 /* DevotionWidget */ = {
+			isa = PBXGroup;
+			children = (
+				667DEDB4282B119C0089B916 /* DevotionWidget.swift */,
+				667DEDB6282B119E0089B916 /* Assets.xcassets */,
+				667DEDB8282B119E0089B916 /* Info.plist */,
+			);
+			path = DevotionWidget;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -166,15 +234,34 @@
 				667DED6E282AAC6E0089B916 /* Sources */,
 				667DED6F282AAC6E0089B916 /* Frameworks */,
 				667DED70282AAC6E0089B916 /* Resources */,
+				667DEDBF282B119E0089B916 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				667DEDBA282B119E0089B916 /* PBXTargetDependency */,
 			);
 			name = Devotion;
 			productName = Devotion;
 			productReference = 667DED72282AAC6E0089B916 /* Devotion.app */;
 			productType = "com.apple.product-type.application";
+		};
+		667DEDAC282B119C0089B916 /* DevotionWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 667DEDBC282B119E0089B916 /* Build configuration list for PBXNativeTarget "DevotionWidgetExtension" */;
+			buildPhases = (
+				667DEDA9282B119C0089B916 /* Sources */,
+				667DEDAA282B119C0089B916 /* Frameworks */,
+				667DEDAB282B119C0089B916 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DevotionWidgetExtension;
+			productName = DevotionWidgetExtension;
+			productReference = 667DEDAD282B119C0089B916 /* DevotionWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -187,6 +274,9 @@
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
 					667DED71282AAC6E0089B916 = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+					667DEDAC282B119C0089B916 = {
 						CreatedOnToolsVersion = 13.3.1;
 					};
 				};
@@ -205,6 +295,7 @@
 			projectRoot = "";
 			targets = (
 				667DED71282AAC6E0089B916 /* Devotion */,
+				667DEDAC282B119C0089B916 /* DevotionWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -219,6 +310,15 @@
 				667DED7A282AAC700089B916 /* Assets.xcassets in Resources */,
 				667DEDA6282B09C20089B916 /* sound-tap.mp3 in Resources */,
 				667DEDA4282B09C20089B916 /* sound-ding.mp3 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		667DEDAB282B119C0089B916 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				667DEDC0282B15F60089B916 /* Assets.xcassets in Resources */,
+				667DEDB7282B119E0089B916 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,7 +344,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		667DEDA9282B119C0089B916 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				667DEDB5282B119C0089B916 /* DevotionWidget.swift in Sources */,
+				667DEDC1282B16920089B916 /* Constant.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		667DEDBA282B119E0089B916 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 667DEDAC282B119C0089B916 /* DevotionWidgetExtension */;
+			targetProxy = 667DEDB9282B119E0089B916 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		667DED83282AAC700089B916 /* Debug */ = {
@@ -364,6 +481,7 @@
 		667DED86282AAC700089B916 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -394,6 +512,7 @@
 		667DED87282AAC700089B916 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -421,6 +540,60 @@
 			};
 			name = Release;
 		};
+		667DEDBD282B119E0089B916 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3PX6J6VL32;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DevotionWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = DevotionWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.januszewski.Devotion.DevotionWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		667DEDBE282B119E0089B916 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3PX6J6VL32;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DevotionWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = DevotionWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.januszewski.Devotion.DevotionWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -438,6 +611,15 @@
 			buildConfigurations = (
 				667DED86282AAC700089B916 /* Debug */,
 				667DED87282AAC700089B916 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		667DEDBC282B119E0089B916 /* Build configuration list for PBXNativeTarget "DevotionWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				667DEDBD282B119E0089B916 /* Debug */,
+				667DEDBE282B119E0089B916 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
