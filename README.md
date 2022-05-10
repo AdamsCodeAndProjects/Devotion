@@ -5,11 +5,11 @@ This SwiftUI app features Core Data.  It creates a checklist of things to do tha
 
 <h1> Featuring </h1>
 * Core Data with SwiftUI App Life Cycle <br>
-* Basic Widget
-* Switches from Light to Dark mode by a click of a button.
-* Uses a blur visual effect when typing 
-* A custom Checklist Toggle style
-* Sound effects
+* Basic Widget <br>
+* Switches from Light to Dark mode by a click of a button. <br>
+* Uses a blur visual effect when typing <br>
+* A custom Checklist Toggle style <br>
+* Sound effects <br>
 
 <h1> Images </h1>
 <img width="356" alt="Screen Shot 2022-05-10 at 6 12 56 PM" src="https://user-images.githubusercontent.com/87610332/167730453-114b22c3-699c-4637-9be8-e7eb60e5c8d6.png">
